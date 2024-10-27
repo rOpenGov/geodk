@@ -19,6 +19,6 @@ Config/testthat/parallel: true
 Depends: 
   R (>= 3.5.0)
 Imports: 
-    dawaR (>= 0.2.0)
+    dawaR (>= 0.2.3)
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
