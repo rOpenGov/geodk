@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/aleksanderbl29/geodk/graph/badge.svg)](https://app.codecov.io/gh/aleksanderbl29/geodk)
 <!-- badges: end -->
 
-The goal of geodk is to ...
+`{geodk}` provides access to Danish geospatial data.
 
 ## Installation
 
@@ -31,27 +31,19 @@ You can install the development version of geodk from [GitHub](https://github.co
 pak::pak("aleksanderbl29/geodk")
 ```
 
-## Example
+## Functions
 
-This is a basic example which shows you how to solve a common problem:
+`{geodk}` provides to main sets of functions:
+
+- Data retrieval
+- Plotting
+
+### Plotting
+
+The plotting functions include `plot_denmark()` which easily plots a basic map of Denmark and returns it as a `{ggplot2}` object for you to edit. It also includes `plot_region` and `plot_municipality` which plots a subset of Denmark with focus on provided regions or municipalities.
 
 ```{r example}
 library(geodk)
-## basic example code
+plot_denmark()
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
