@@ -13,6 +13,8 @@ test_that("get_levels() provides the right levels", {
     "menighedsraadsafstemningsomraader"
   )
 
-  expect_equal(get_levels(),
-               levels)
+  expect_equal(
+    get_levels(),
+    levels
+  )
 })

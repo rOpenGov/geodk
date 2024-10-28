@@ -47,3 +47,21 @@ plot_denmark()
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
+
+``` r
+plot_regions(region = c("Region Nordjylland", "Region Midtjylland"))
+#> → Using cached response.
+#> Change this behaviour by setting cache = FALSE
+```
+
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+
+``` r
+plot_municipalities(municipality = c("Aarhus", "Favrskov", "Vejle"))
+#> → Getting data on `kommuner`. This usually takes 13.13s.
+#> Fetching data from the API. This will take some time.
+#> Reading data to `st`.
+#> Converting map data to `sf` object
+```
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />

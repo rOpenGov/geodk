@@ -47,3 +47,13 @@ library(geodk)
 plot_denmark()
 ```
 
+```{r}
+plot_regions(region = c("Region Nordjylland", "Region Midtjylland"))
+```
+
+```{r}
+plot_municipalities(municipality = c("Aarhus", "Favrskov", "Vejle"))
+```
+
+
+
