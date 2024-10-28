@@ -33,8 +33,9 @@ pak::pak("aleksanderbl29/geodk")
 
 The plotting functions include `plot_denmark()` which easily plots a
 basic map of Denmark and returns it as a `{ggplot2}` object for you to
-edit. It also includes `plot_region` and `plot_municipality` which plots
-a subset of Denmark with focus on provided regions or municipalities.
+edit. It also includes `plot_region()` and `plot_municipality()` which
+plots a subset of Denmark with focus on provided regions or
+municipalities.
 
 ``` r
 library(geodk)
