@@ -22,6 +22,7 @@ Depends:
   R (>= 3.5.0)
 Imports: 
     dawaR (>= 0.2.3),
+    dplyr,
     ggplot2 (>= 3.4.0),
     rlang
 Roxygen: list(markdown = TRUE)

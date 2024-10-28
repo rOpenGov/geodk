@@ -26,7 +26,7 @@ plot_municipalities(
 )
 }
 \arguments{
-\item{region}{Municipality to plot. Mutiple is supported.}
+\item{municipality}{Municipality to plot. Mutiple is supported.}
 }
 \value{
 Returns a \code{{ggplot2}} object and prints the plot as well.

@@ -3,10 +3,11 @@
 #' @description
 #' Plot a vector of municipalities in Denmark. Just provide the name.
 #'
-#' @param region Municipality to plot. Mutiple is supported.
+#' @param municipality Municipality to plot. Mutiple is supported.
 #'
 #' @export
 #' @importFrom ggplot2 ggplot theme_bw labs geom_sf aes guides
+#' @importFrom rlang .data
 #'
 #' @returns Returns a `{ggplot2}` object and prints the plot as well.
 #' @examples
@@ -124,7 +125,7 @@ plot_municipalities <- function(
   }
 
   dawaR::get_map_data("kommuner") |>
-    dplyr::filter(navn %in% municipality) |>
+    dplyr::filter(.data$navn %in% municipality) |>
     ggplot() +
     geom_sf() +
     theme_bw() +
