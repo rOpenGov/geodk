@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.4.1",
+    "Version": "4.4.2",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -21,7 +21,7 @@
       "Package": "BH",
       "Version": "1.84.0-0",
       "Source": "Repository",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "CRAN",
       "Hash": "a8235afbcd6316e6e91433ea47661013"
     },
     "DBI": {
@@ -100,20 +100,20 @@
     },
     "Rcpp": {
       "Package": "Rcpp",
-      "Version": "1.0.13",
+      "Version": "1.0.13-1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "methods",
         "utils"
       ],
-      "Hash": "f27411eb6d9c3dada5edd444b8416675"
+      "Hash": "6b868847b365672d6c1677b1608da9ed"
     },
     "anytime": {
       "Package": "anytime",
       "Version": "0.3.9",
       "Source": "Repository",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "RSPM",
       "Requirements": [
         "BH",
         "R",
@@ -198,29 +198,34 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "5.2.3",
+      "Version": "6.0.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "d91263322a58af798f6cf3b13fd56dde"
+      "Hash": "e8ba62486230951fcd2b881c5be23f96"
     },
     "dawaR": {
       "Package": "dawaR",
-      "Version": "0.2.3",
+      "Version": "0.2.5",
       "Source": "Repository",
       "Repository": "https://aleksanderbl29.r-universe.dev",
+      "RemoteUrl": "https://github.com/aleksanderbl29/dawaR",
+      "RemoteRef": "universe-release",
+      "RemoteSha": "efb9246dc5736e870d58b63760888c113377d4aa",
       "Requirements": [
         "R",
         "cli",
+        "curl",
         "httr2",
         "memoise",
         "rlang",
         "sf",
-        "tidyRSS"
+        "tidyRSS",
+        "utils"
       ],
-      "Hash": "520e28dd8a87982f22f23a7c0ce93f77"
+      "Hash": "2551c91ca87759e5ac6e0ff8f9a21f58"
     },
     "dplyr": {
       "Package": "dplyr",
@@ -367,7 +372,7 @@
     },
     "httr2": {
       "Package": "httr2",
-      "Version": "1.0.5",
+      "Version": "1.0.6",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -384,7 +389,7 @@
         "vctrs",
         "withr"
       ],
-      "Hash": "d84e4c33206aaace37714901ac2b00c3"
+      "Hash": "3ef5d07ec78803475a94367d71b40c41"
     },
     "isoband": {
       "Package": "isoband",
@@ -648,9 +653,9 @@
     },
     "sf": {
       "Package": "sf",
-      "Version": "1.0-18",
+      "Version": "1.0-19",
       "Source": "Repository",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "CRAN",
       "Requirements": [
         "DBI",
         "R",
@@ -667,7 +672,7 @@
         "units",
         "utils"
       ],
-      "Hash": "801bec14b3bae0f37eef4d187ee0bb44"
+      "Hash": "fe02eec2f6b3ba0e24afe83d5ccfb528"
     },
     "sys": {
       "Package": "sys",
@@ -699,7 +704,7 @@
       "Package": "tidyRSS",
       "Version": "2.0.7",
       "Source": "Repository",
-      "Repository": "https://cloud.r-project.org",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "anytime",
