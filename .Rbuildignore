@@ -6,3 +6,7 @@
 ^\.github$
 ^README\.Rmd$
 ^.lintr$
+^data-raw$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

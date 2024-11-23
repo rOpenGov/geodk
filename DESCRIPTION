@@ -13,6 +13,7 @@ Description: This package provides access to all geospatial data provided by
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
+LazyDataCompression: xz
 Suggests: 
     testthat (>= 3.0.0),
     vdiffr
@@ -27,3 +28,4 @@ Imports:
     rlang
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+URL: http://aleksanderbl.dk/geodk/

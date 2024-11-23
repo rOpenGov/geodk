@@ -8,6 +8,9 @@
 [![R-CMD-check](https://github.com/aleksanderbl29/geodk/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/aleksanderbl29/geodk/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/aleksanderbl29/geodk/graph/badge.svg)](https://app.codecov.io/gh/aleksanderbl29/geodk)
+[![Project Status: WIP – Development in
+progress](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+
 <!-- badges: end -->
 
 `{geodk}` provides access to Danish geospatial data.
