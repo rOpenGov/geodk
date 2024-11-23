@@ -18,7 +18,7 @@ plot_regions <- function(
       "Region Midtjylland",
       "Region Syddanmark",
       "Region Hovedstaden",
-      "Region Sjælland"
+      "Region Sj\u00e6lland"
     )) {
   region <- match.arg(region,
     several.ok = TRUE

@@ -14,7 +14,7 @@ plot_municipalities(
     "Slagelse", "Stevns", "Sorø", "Lejre", 
      "Lolland", "Næstved", "Guldborgsund",
     "Vordingborg", "Bornholm", "Middelfart", "Christiansø", "Assens", "Faaborg-Midtfyn",
-    "Kerteminde", "Nyborg", "Odense", "Svendborg", "Nordfyns", "Langeland", "Ærø",
+    "Kerteminde", "Nyborg", "Odense", "Svendborg", "Nordfyns", "Langeland", "ærø",
     "Haderslev", "Billund", "Sønderborg", "Tønder", "Esbjerg", "Fanø", "Varde",
     "Vejen", "Aabenraa", "Fredericia", "Horsens", "Kolding", "Vejle", "Herning",
     "Holstebro", "Lemvig", "Struer", "Syddjurs", "Norddjurs", "Favrskov", "Odder",
