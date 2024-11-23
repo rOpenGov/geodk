@@ -36,6 +36,9 @@ plot_denmark <- function(level = "regions",
     "kommune", "komunner"
   )) {
     type <- "kommuner"
+  } else if (level %in% c(
+    "postnumre", "post numre", "postal code", "postcode", "postal")) {
+    type <- "postnumre"
   } else {
     type <- level
   }
