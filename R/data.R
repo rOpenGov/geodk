@@ -13,6 +13,9 @@
 #'   \item{geometry}{Polygons for each region}
 #'   \item{last_update}{When was the data in the package last updated by maintainers}
 #' }
+#' @source Provided by The Danish Agency of Climate Data
+#'   https://dawadocs.dataforsyningen.dk/dok/om#vilkaar. Terms and conditions
+#'   apply.
 "regions"
 
 #' Danish municipalities
@@ -31,4 +34,7 @@
 #'   \item{geometry}{Polygons for each municipality}
 #'   \item{last_update}{When was the data in the package last updated by maintainers}
 #' }
+#' @source Provided by The Danish Agency of Climate Data
+#'   https://dawadocs.dataforsyningen.dk/dok/om#vilkaar. Terms and conditions
+#'   apply.
 "municipalities"

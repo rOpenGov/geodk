@@ -20,6 +20,11 @@ An object of classes \code{sf} and \code{data.frame} with 99 rows and 9 columns:
 }
 }
 }
+\source{
+Provided by The Danish Agency of Climate Data
+https://dawadocs.dataforsyningen.dk/dok/om#vilkaar. Terms and conditions
+apply.
+}
 \usage{
 municipalities
 }

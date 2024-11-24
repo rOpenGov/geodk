@@ -19,6 +19,11 @@ An object of classes \code{sf} and \code{data.frame} with 5 rows and 8 columns:
 }
 }
 }
+\source{
+Provided by The Danish Agency of Climate Data
+https://dawadocs.dataforsyningen.dk/dok/om#vilkaar. Terms and conditions
+apply.
+}
 \usage{
 regions
 }
