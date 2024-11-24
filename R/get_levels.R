@@ -1,3 +1,12 @@
+#' Get all available levels
+#'
+#' @returns This funciton returns all available levels for the `plot_*`
+#'   functions.
+#'
+#' @export
+#' @examples
+#' get_levels()
+#'
 get_levels <- function() {
   levels <- c(
     "regioner",

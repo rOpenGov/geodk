@@ -2,6 +2,7 @@ Package: geodk
 Type: Package
 Title: Access Danish Geospatial Data
 Version: 0.0.0.9000
+Date: 2024-11-24
 Authors@R: 
     person("Aleksander", "Bang-Larsen", , "contact@aleksanderbl.dk",
            role = c("aut", "cre", "cph"),
