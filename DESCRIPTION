@@ -3,10 +3,14 @@ Type: Package
 Title: Access Danish Geospatial Data
 Version: 0.0.0.9000
 Date: 2024-11-24
-Authors@R: 
+Authors@R: c(
     person("Aleksander", "Bang-Larsen", , "contact@aleksanderbl.dk",
            role = c("aut", "cre", "cph"),
-           comment = c(ORCID = "0009-0007-7984-4650"))
+           comment = c(ORCID = "0009-0007-7984-4650")),
+    person("Agency of Climate Data", role = c("ctb"),
+           comment = c(NOTE = "The Danish Agency of Climate Data serves this
+           data for the public and have not actively contributed to the
+           distribution in this package.")))
 Maintainer: Aleksander Bang-Larsen <contact@aleksanderbl.dk>
 Description: This package provides access to all geospatial data provided by
     the danish agency called Klimadatastyrelsen. Under the hood it wraps the
@@ -29,4 +33,5 @@ Imports:
     rlang
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-URL: http://aleksanderbl.dk/geodk/ https://github.com/aleksanderbl29/geodk
+URL: http://aleksanderbl.dk/geodk/, https://github.com/aleksanderbl29/geodk
+BugReports: https://github.com/aleksanderbl29/geodk/issues
