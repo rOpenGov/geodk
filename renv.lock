@@ -208,12 +208,9 @@
     },
     "dawaR": {
       "Package": "dawaR",
-      "Version": "0.2.5",
+      "Version": "0.2.6",
       "Source": "Repository",
-      "Repository": "https://aleksanderbl29.r-universe.dev",
-      "RemoteUrl": "https://github.com/aleksanderbl29/dawaR",
-      "RemoteRef": "universe-release",
-      "RemoteSha": "efb9246dc5736e870d58b63760888c113377d4aa",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "cli",
@@ -225,7 +222,7 @@
         "tidyRSS",
         "utils"
       ],
-      "Hash": "2551c91ca87759e5ac6e0ff8f9a21f58"
+      "Hash": "584d7691aa6f15de5f14882e62da18fd"
     },
     "dplyr": {
       "Package": "dplyr",
