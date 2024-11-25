@@ -10,7 +10,6 @@
 coverage](https://codecov.io/gh/aleksanderbl29/geodk/graph/badge.svg)](https://app.codecov.io/gh/aleksanderbl29/geodk)
 [![Project Status: WIP – Development in
 progress](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
-
 <!-- badges: end -->
 
 `{geodk}` provides access to Danish geospatial data.
@@ -23,6 +22,28 @@ You can install the development version of geodk from
 ``` r
 # install.packages("pak")
 pak::pak("aleksanderbl29/geodk")
+```
+
+## Installation
+
+You can install `{geodk}` from r-universe with:
+
+``` r
+install.packages(
+  "geodk",
+  repos = c(
+    aleksanderbl29 = "https://aleksanderbl29.r-universe.dev",
+    getOption("repos")
+  )
+)
+```
+
+You can install the latest development version of `{geodk}` from
+[GitHub](https://github.com/aleksanderbl29/geodk) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("aleksanderbl29/geodk")
 ```
 
 ## Functions

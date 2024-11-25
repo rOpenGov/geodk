@@ -19,7 +19,6 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/aleksanderbl29/geodk/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/aleksanderbl29/geodk/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/aleksanderbl29/geodk/graph/badge.svg)](https://app.codecov.io/gh/aleksanderbl29/geodk)
 [![Project Status: WIP – Development in progress](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
-
 <!-- badges: end -->
 
 `{geodk}` provides access to Danish geospatial data.
@@ -31,6 +30,48 @@ You can install the development version of geodk from [GitHub](https://github.co
 ``` r
 # install.packages("pak")
 pak::pak("aleksanderbl29/geodk")
+```
+
+
+
+## Installation
+
+```{r check_cran, include=FALSE}
+if (!require(available)) install.packages("available")
+is_on_cran <- !available::available_on_cran("geodk")
+```
+
+```{r cran_instruct, echo=FALSE, results='asis', eval=is_on_cran}
+cat("You can install `{geodk}` from CRAN with:")
+```
+
+```{r cran_code, eval=FALSE, include=is_on_cran}
+install.packages("geodk")
+```
+
+```{r r_universe_instruct, echo=FALSE, results='asis'}
+if (is_on_cran) {
+  cat("Or you can install the latest pre-release version of `{geodk}` from r-universe with:")
+} else if (!is_on_cran) {
+  cat("You can install `{geodk}` from r-universe with:")
+}
+```
+
+```{r r_universe, eval=FALSE}
+install.packages(
+  "geodk",
+  repos = c(
+    aleksanderbl29 = "https://aleksanderbl29.r-universe.dev",
+    getOption("repos")
+  )
+)
+```
+
+You can install the latest development version of `{geodk}` from [GitHub](https://github.com/aleksanderbl29/geodk) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("aleksanderbl29/geodk")
 ```
 
 ## Functions
