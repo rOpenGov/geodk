@@ -58,7 +58,6 @@
 </h1></div>
 <!-- badges: start -->
 
-<!-- badges: end -->
 <p><a href="http://aleksanderbl.dk/geodk/">geodk</a> provides access to Danish geospatial data.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -67,6 +66,23 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
 <span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"aleksanderbl29/geodk"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="installation-1">Installation<a class="anchor" aria-label="anchor" href="#installation-1"></a>
+</h2>
+<p>You can install <a href="http://aleksanderbl.dk/geodk/">geodk</a> from r-universe with:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span></span>
+<span>  <span class="st">"geodk"</span>,</span>
+<span>  repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
+<span>    aleksanderbl29 <span class="op">=</span> <span class="st">"https://aleksanderbl29.r-universe.dev"</span>,</span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"repos"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+<p>You can install the latest development version of <a href="http://aleksanderbl.dk/geodk/">geodk</a> from <a href="https://github.com/aleksanderbl29/geodk" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"aleksanderbl29/geodk"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="functions">Functions<a class="anchor" aria-label="anchor" href="#functions"></a>
@@ -80,7 +96,7 @@
 <h3 id="plotting">Plotting<a class="anchor" aria-label="anchor" href="#plotting"></a>
 </h3>
 <p>The plotting functions include <code><a href="reference/plot_denmark.html">plot_denmark()</a></code> which easily plots a basic map of Denmark and returns it as a <a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a> object for you to edit. It also includes <code>plot_region()</code> and <code>plot_municipality()</code> which plots a subset of Denmark with focus on provided regions or municipalities.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://aleksanderbl.dk/geodk/">geodk</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/plot_denmark.html">plot_denmark</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; → Getting data on `regioner`. This usually takes 10.24s.</span></span>
@@ -88,17 +104,17 @@
 <span><span class="co">#&gt; Reading data to `st`.</span></span>
 <span><span class="co">#&gt; Converting map data to `sf` object</span></span></code></pre></div>
 <p><img src="reference/figures/README-example-1.png" width="100%"></p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">region</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/plot_regions.html">plot_regions</a></span><span class="op">(</span>region <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Region Nordjylland"</span>, <span class="st">"Region Midtjylland"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; → Using cached response.</span></span>
 <span><span class="co">#&gt; Change this behaviour by setting cache = FALSE</span></span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">municipality</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/plot_municipalities.html">plot_municipalities</a></span><span class="op">(</span>municipality <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Aarhus"</span>, <span class="st">"Favrskov"</span>, <span class="st">"Vejle"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; → Getting data on `kommuner`. This usually takes 13.13s.</span></span>
 <span><span class="co">#&gt; Fetching data from the API. This will take some time.</span></span>
 <span><span class="co">#&gt; Reading data to `st`.</span></span>
 <span><span class="co">#&gt; Converting map data to `sf` object</span></span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com" class="external-link">patchwork</a></span><span class="op">)</span></span>
 <span><span class="va">region</span> <span class="op">+</span> <span class="va">municipality</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-4-1.png" width="100%"></p>
