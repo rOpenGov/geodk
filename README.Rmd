@@ -16,24 +16,14 @@ knitr::opts_chunk$set(
 # geodk
 
 <!-- badges: start -->
-[![geodk status badge](https://aleksanderbl29.r-universe.dev/badges/geodk)](https://aleksanderbl29.r-universe.dev/geodk)
-[![R-CMD-check](https://github.com/aleksanderbl29/geodk/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/aleksanderbl29/geodk/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/aleksanderbl29/geodk/graph/badge.svg)](https://app.codecov.io/gh/aleksanderbl29/geodk)
+[![geodk status badge](https://ropengov.r-universe.dev/badges/geodk)](https://ropengov.r-universe.dev/geodk)
+[![R-CMD-check](https://github.com/rOpenGov/geodk/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rOpenGov/geodk/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/ropengov/geodk/graph/badge.svg)](https://app.codecov.io/gh/ropengov/geodk)
 [![Project Status: WIP – Development in progress](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![rOG-badge](https://ropengov.github.io/rogtemplate/reference/figures/ropengov-badge.svg)](https://ropengov.org/)
 <!-- badges: end -->
 
 `{geodk}` provides access to Danish geospatial data.
-
-## Installation
-
-You can install the development version of geodk from [GitHub](https://github.com/) with:
-
-``` r
-# install.packages("pak")
-pak::pak("aleksanderbl29/geodk")
-```
-
-
 
 ## Installation
 
@@ -62,17 +52,17 @@ if (is_on_cran) {
 install.packages(
   "geodk",
   repos = c(
-    aleksanderbl29 = "https://aleksanderbl29.r-universe.dev",
+    ropengov = "https://ropengov.r-universe.dev",
     getOption("repos")
   )
 )
 ```
 
-You can install the latest development version of `{geodk}` from [GitHub](https://github.com/aleksanderbl29/geodk) with:
+You can install the latest development version of `{geodk}` from [GitHub](https://github.com/rOpenGov/geodk) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("aleksanderbl29/geodk")
+devtools::install_github("rOpenGov/geodk")
 ```
 
 ## Functions

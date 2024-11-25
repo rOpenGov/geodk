@@ -1,33 +1,28 @@
-url: http://aleksanderbl.dk/geodk/
+url: https://ropengov.github.io/geodk/
 template:
-  bootstrap: 5
-  light-switch: true
+  bootstrap: 5.0
+  package: rogtemplate
+  opengraph:
+    twitter:
+      site: '@rOpenGov'
 
 authors:
   Aleksander Bang-Larsen:
     href: https://aleksanderbl.dk
 
+
 reference:
-  - title: Plotting
-    desc: >
-      Convenient functions for plotting one or more dansih geographic parts.
-      All of these function in the same way and allow you to provide a single
-      name or a vector of names of the areas you would like to plot as well
-      as fill and color options.
-    contents:
-      - starts_with("plot")
-
-  - title: Data
-    desc: >
-      Datasets that are provided with the package. At some point the plotting
-      functions will default to use these datasets to spare you, as the user,
-      of the waiting times of the official API.
-    contents:
-      - regions
-      - municipalities
-
-  - title: Misc
-    desc: >
-      Miscellanious functions
-    contents:
-      - get_levels
+- title: Plotting
+  desc: |
+    Convenient functions for plotting one or more dansih geographic parts. All of these function in the same way and allow you to provide a single name or a vector of names of the areas you would like to plot as well as fill and color options.
+  contents: starts_with("plot")
+- title: Data
+  desc: |
+    Datasets that are provided with the package. At some point the plotting functions will default to use these datasets to spare you, as the user, of the waiting times of the official API.
+  contents:
+  - regions
+  - municipalities
+- title: Misc
+  desc: |
+    Miscellanious functions
+  contents: get_levels
