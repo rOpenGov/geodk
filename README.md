@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![geodk status
+badge](https://aleksanderbl29.r-universe.dev/badges/geodk)](https://aleksanderbl29.r-universe.dev/geodk)
 [![R-CMD-check](https://github.com/aleksanderbl29/geodk/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/aleksanderbl29/geodk/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/aleksanderbl29/geodk/graph/badge.svg)](https://app.codecov.io/gh/aleksanderbl29/geodk)
