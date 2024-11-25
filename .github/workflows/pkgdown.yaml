@@ -11,9 +11,14 @@ name: rogtemplate-gh-pages
 jobs:
   rogtemplate-gh-pages:
     runs-on: ubuntu-latest
+    # Only restrict concurrency for non-PR jobs
+    concurrency:
+      group: pkgdown-${{ github.event_name != 'pull_request' || github.run_id }}
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-    steps:
+    permissions:
+      contents: write
+steps:
       - uses: actions/checkout@v4
 
       - uses: r-lib/actions/setup-pandoc@v2
@@ -30,23 +35,14 @@ jobs:
 
           needs: website
 
-      - name: Build logo if not present and prepare template
-        run: |
-          # Check that logo is not present
-          if (isFALSE(file.exists(file.path("man", "figures", "logo.png")) ||
-            file.exists(file.path("man", "figures", "logo.png")))) {
-            rogtemplate::rog_logo()
-          } else {
-
-            message("The package already has a logo")
-          }
-
-          rogtemplate::rog_add_template_pkgdown()
-
+      - name: Build site
+        run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
         shell: Rscript {0}
 
-      - name: Deploy package
-        run: |
-          git config --local user.name "$GITHUB_ACTOR"
-          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          Rscript -e 'pkgdown::deploy_to_branch(new_process = FALSE)'
+      - name: Deploy to GitHub pages 🚀
+        if: github.event_name != 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        with:
+          clean: false
+          branch: gh-pages
+          folder: docs
