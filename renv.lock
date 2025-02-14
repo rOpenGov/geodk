@@ -588,7 +588,7 @@
       "RemoteRepo": "dkstat",
       "RemoteUsername": "rOpenGov",
       "RemoteRef": "feat/geodk-friendly",
-      "RemoteSha": "169e7c2d9628da4be834c6c591d39975acc13b69",
+      "RemoteSha": "cd6823d3bcaea2dd4e70e4e6519faba367799672",
       "Requirements": [
         "R",
         "httr",
@@ -596,7 +596,7 @@
         "lubridate",
         "stringr"
       ],
-      "Hash": "0b75e2318976d227525dac6370b6535e"
+      "Hash": "25c82705537a209fcd38eddb95a24bc7"
     },
     "downlit": {
       "Package": "downlit",
