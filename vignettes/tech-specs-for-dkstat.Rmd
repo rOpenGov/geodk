@@ -52,6 +52,12 @@ dkstat::dst_get_all_data("laby01") |>
   tail()
 ```
 
+```{r, eval = FALSE}
+dkstat::dst_get_all_data("laby01") |> #class()
+  geodk::geodk_enrich()
+```
+
+
 When looking at the above tail, I (and probably you, as well) can recognise that the `OMRÅDE` column is the geographic one.
 
 ### Tables with multiple geographic levels

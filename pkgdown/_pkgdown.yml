@@ -22,6 +22,11 @@ reference:
   contents:
   - regions
   - municipalities
+- title: Integration with other pacakges
+  desc: |
+    Functions to enhance data from other pacakges
+  contents:
+  - geodk_enrich
 - title: Misc
   desc: |
     Miscellanious functions
