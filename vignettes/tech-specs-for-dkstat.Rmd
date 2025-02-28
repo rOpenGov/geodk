@@ -14,11 +14,10 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup, include = FALSE, eval = FALSE}
+```{r setup, include = FALSE, eval = TRUE}
 library(dkstat)
 library(geodk)
-library(tidyverse)
-# library(ggflowchart)
+library(dplyr)
 ```
 
 # What is this?
