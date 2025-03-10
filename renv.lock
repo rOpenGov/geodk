@@ -1248,7 +1248,8 @@
         "httr",
         "jsonlite",
         "lubridate",
-        "stringr"
+        "stringr",
+        "cli"
       ],
       "Suggests": [
         "knitr",
@@ -1257,7 +1258,6 @@
         "dplyr",
         "geodk"
       ],
-      "Remotes": "rOpenGov/geodk",
       "Encoding": "UTF-8",
       "Roxygen": "list(markdown = TRUE)",
       "Config/testthat/edition": "3",
@@ -1270,15 +1270,15 @@
       ],
       "LazyData": "true",
       "VignetteBuilder": "knitr",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "dkstat",
-      "RemoteUsername": "rOpenGov",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "c7955a9586e969f1b63f043471205644091e5d0a",
-      "NeedsCompilation": "no",
       "Author": "Aleksander Bang-Larsen [aut, cre] (<https://orcid.org/0009-0007-7984-4650>), Kenneth Rose [aut] (Original creator), Thomas J. leeper [ctb]",
-      "Maintainer": "Aleksander Bang-Larsen <contact@aleksanderbl.dk>"
+      "Maintainer": "Aleksander Bang-Larsen <contact@aleksanderbl.dk>",
+      "RemoteType": "github",
+      "RemoteUsername": "rOpenGov",
+      "RemoteRepo": "dkstat",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "216e23ecd6b52622ec4d20d051bacf8d8d1b2ebb",
+      "RemoteHost": "api.github.com",
+      "Remotes": "rOpenGov/geodk"
     },
     "downlit": {
       "Package": "downlit",
