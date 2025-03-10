@@ -9,6 +9,7 @@
 #'
 #'
 #' @param x Dataframe. Preferably from `{dkstat}`
+#' @importFrom rlang .data
 #'
 #' @returns Returns a dataframe of the dimensions `cols +1 by rows`.
 #' @export
@@ -19,11 +20,17 @@ geodk_enrich <- function(x) {
 
 #' @export
 geodk_enrich.default <- function(x) {
-  cli::cli_abort("Only output from dkstat is supported at the moment")
+  cli::cli_abort(
+    c(
+      "Only output from dkstat is supported at the moment.",
+      "If you have provided output from dkstat and it still does not work,",
+      "please submit an issue on {.url {'https://github.com/rOpenGov/geodk/issues'}}"
+    )
+  )
 }
 
 #' @export
-geodk_enrich.dkstat_kom_omraade <- function(x) {
+geodk_enrich.dkstat_Denmark_municipality_07 <- function(x) {
 
   # List groupings
   hele_landet <- "000 Hele landet"
@@ -38,15 +45,15 @@ geodk_enrich.dkstat_kom_omraade <- function(x) {
   cli::cli_inform(c("i" = "Getting municipality geometries."))
   # Get sf geometries for individual municipalities
   individuals_sf <- dawaR::get_map_data("kommuner", verbose = FALSE) |>
-    dplyr::select(navn)
+    dplyr::select(.data$navn)
 
   cli::cli_inform(c("i" = "Assigning geometries to individual municipalities."))
   # Split individual observations and merge with geometries
   individuals <- x |>
-    dplyr::filter(!KOMGRP %in% c(hele_landet, groups)) |>
-    dplyr::mutate(navn = substr(KOMGRP, 5, nchar(KOMGRP))) |>
+    dplyr::filter(!.data$KOMGRP %in% c(hele_landet, groups)) |>
+    dplyr::mutate(navn = substr(.data$KOMGRP, 5, nchar(.data$KOMGRP))) |>
     dplyr::left_join(individuals_sf, by = dplyr::join_by(navn)) |>
-    dplyr::select(-navn) |>
+    dplyr::select(-.data$navn) |>
     sf::st_as_sf(crs = sf::st_crs(individuals_sf))
 
   cli::cli_inform(c("i" = "Drawing geometries for municipality groupings."))
@@ -54,16 +61,16 @@ geodk_enrich.dkstat_kom_omraade <- function(x) {
   groupings_sf <- individuals |>
     dplyr::left_join(komgrp, by = c("KOMGRP" = "name")) |>
     stats::na.omit() |>
-    dplyr::select(level, geometry) |>
+    dplyr::select(.data$level, .data$geometry) |>
     unique() |>
     sf::st_as_sf(crs = sf::st_crs(individuals_sf)) |> #sf::st_union()
-    dplyr::group_by(level) |>
+    dplyr::group_by(.data$level) |>
     dplyr::summarise() # This uses the summarise method for sf objects.
 
   cli::cli_inform(c("i" = "Assigning geometries to municipality groupings."))
   # Filter out groupings and merge with their geometries
   groupings <- x |>
-    dplyr::filter(KOMGRP %in% groups) |>
+    dplyr::filter(.data$KOMGRP %in% groups) |>
     dplyr::left_join(groupings_sf, by = c("KOMGRP" = "level")) |>
     sf::st_as_sf(crs = sf::st_crs(groupings_sf))
 
@@ -75,7 +82,7 @@ geodk_enrich.dkstat_kom_omraade <- function(x) {
         sf::st_union(),
       nrow(
         x |>
-          dplyr::filter(KOMGRP %in% hele_landet)
+          dplyr::filter(.data$KOMGRP %in% hele_landet)
         )
       )
   )
@@ -83,7 +90,7 @@ geodk_enrich.dkstat_kom_omraade <- function(x) {
   cli::cli_inform(c("i" = "Assigning geometry to entire Denmark."))
   # Merge data with geometries
   denmark <- x |>
-    dplyr::filter(KOMGRP %in% hele_landet) |>
+    dplyr::filter(.data$KOMGRP %in% hele_landet) |>
     sf::st_sf(geometry = dk_sf)
 
   cli::cli_inform(c("i" = "Merging data."))
@@ -94,12 +101,13 @@ geodk_enrich.dkstat_kom_omraade <- function(x) {
     individuals
   )
 
-  cli::cli_inform(c("i" = "Assigning the proper class."))
+  # cli::cli_inform(c("i" = "Assigning the proper class."))
   # Return data.frame - Essentially strips all other classes
   # structure(
   #   out,
   #   class = "data.frame"
   # )
   class(out) <- "data.frame"
-}
 
+  out
+}

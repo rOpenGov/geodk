@@ -12,19 +12,23 @@ authors:
 
 
 reference:
+- title: Data retrieval
+  desc: |
+    Functions for retrieving geographic data.
+  contents:
+    - regions
+    - municipalities
+    - parishes
+    - constituencies
+    - get_geo
+    - prefill_cache
 - title: Plotting
   desc: |
     Convenient functions for plotting one or more dansih geographic parts. All of these function in the same way and allow you to provide a single name or a vector of names of the areas you would like to plot as well as fill and color options.
   contents: starts_with("plot")
-- title: Data
-  desc: |
-    Datasets that are provided with the package. At some point the plotting functions will default to use these datasets to spare you, as the user, of the waiting times of the official API.
-  contents:
-  - regions
-  - municipalities
 - title: Integration with other pacakges
   desc: |
-    Functions to enhance data from other pacakges
+    Functions to enhance data from other packages
   contents:
   - geodk_enrich
 - title: Misc
