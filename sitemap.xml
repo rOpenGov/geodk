@@ -1,14 +1,22 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url><loc>https://ropengov.github.io/geodk/404.html</loc></url>
 <url><loc>https://ropengov.github.io/geodk/LICENSE.html</loc></url>
+<url><loc>https://ropengov.github.io/geodk/articles/index.html</loc></url>
+<url><loc>https://ropengov.github.io/geodk/articles/tech-specs-for-dkstat.html</loc></url>
 <url><loc>https://ropengov.github.io/geodk/authors.html</loc></url>
 <url><loc>https://ropengov.github.io/geodk/index.html</loc></url>
+<url><loc>https://ropengov.github.io/geodk/news/index.html</loc></url>
+<url><loc>https://ropengov.github.io/geodk/reference/constituencies.html</loc></url>
+<url><loc>https://ropengov.github.io/geodk/reference/geodk_enrich.html</loc></url>
+<url><loc>https://ropengov.github.io/geodk/reference/get_geo.html</loc></url>
 <url><loc>https://ropengov.github.io/geodk/reference/get_levels.html</loc></url>
 <url><loc>https://ropengov.github.io/geodk/reference/index.html</loc></url>
 <url><loc>https://ropengov.github.io/geodk/reference/municipalities.html</loc></url>
+<url><loc>https://ropengov.github.io/geodk/reference/parishes.html</loc></url>
 <url><loc>https://ropengov.github.io/geodk/reference/plot_denmark.html</loc></url>
 <url><loc>https://ropengov.github.io/geodk/reference/plot_municipalities.html</loc></url>
 <url><loc>https://ropengov.github.io/geodk/reference/plot_regions.html</loc></url>
+<url><loc>https://ropengov.github.io/geodk/reference/prefill_cache.html</loc></url>
 <url><loc>https://ropengov.github.io/geodk/reference/regions.html</loc></url>
 </urlset>
 
