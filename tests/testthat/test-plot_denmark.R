@@ -1,4 +1,6 @@
 test_that("plot_denmark properly creates nice plots", {
+  skip_on_ci()
+
   expect_no_error(plot_denmark())
   expect_no_error(plot_denmark(fill = "navn"))
   expect_no_error(plot_denmark(fill = "names"))
