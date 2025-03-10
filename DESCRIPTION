@@ -26,7 +26,9 @@ Imports:
     dawaR (>= 0.2.3),
     dplyr,
     ggplot2 (>= 3.4.0),
-    rlang
+    rlang,
+    sf,
+    cli
 Suggests: 
     testthat (>= 3.0.0),
     vdiffr,
