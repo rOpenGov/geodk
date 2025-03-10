@@ -1,8 +1,8 @@
 Type: Package
 Package: geodk
 Title: Access Danish Geospatial Data
-Version: 0.0.0.9000
-Date: 2024-11-25
+Version: 0.0.0.9001
+Date: 2025-03-10
 Authors@R: c(
     person("Aleksander", "Bang-Larsen", , "contact@aleksanderbl.dk",
             role = c("aut", "cre", "cph"), 
@@ -21,21 +21,29 @@ License: GPL (>= 3)
 URL: https://ropengov.github.io/geodk/, https://github.com/rOpenGov/geodk
 BugReports: https://github.com/rOpenGov/geodk/issues
 Depends: 
-    R (>= 3.5.0)
+    R (>= 4.1.0)
 Imports: 
     dawaR (>= 0.2.3),
     dplyr,
     ggplot2 (>= 3.4.0),
-    rlang
+    rlang,
+    sf,
+    cli
 Suggests: 
     testthat (>= 3.0.0),
-    vdiffr
+    vdiffr,
+    tibble,
+    readr,
+    knitr,
+    rmarkdown,
+    dkstat
+Remotes:
+    rOpenGov/dkstat
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Encoding: UTF-8
-LazyData: true
-LazyDataCompression: xz
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 X-schema.org-isPartOf: http://ropengov.org/
 X-schema.org-keywords: ropengov
+VignetteBuilder: knitr

@@ -41,10 +41,30 @@ devtools::install_github("rOpenGov/geodk")
 
 ## Functions
 
-`{geodk}` provides to main sets of functions:
+`{geodk}` provides three main sets of functions:
 
 - Data retrieval
 - Plotting
+- Enrichment of statistical data from `{dkstat}`
+
+### Data retrieval
+
+The package contains a few functions for retrieving data.
+
+``` r
+regions()
+municipalities()
+parishes()
+constituencies()
+```
+
+The geographic levels not included in their own functions can be
+accessed through `get_geo()`.
+
+``` r
+get_geo()
+prefill_cache()
+```
 
 ### Plotting
 
@@ -84,4 +104,14 @@ library(patchwork)
 region + municipality
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+
+### Enrichment of statistical data from `{dkstat}`
+
+The function `geodk_enrich()` enables you to add appropriate geographic
+information to statistical descriptions from the `{dkstat}` package.
+
+``` r
+dkstat::dst_get_all_data("laby01") |> 
+  geodk::geodk_enrich()
+```
