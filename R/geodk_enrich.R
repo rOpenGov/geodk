@@ -23,6 +23,7 @@ geodk_enrich.default <- function(x) {
   cli::cli_abort(
     c(
       "Only output from dkstat is supported at the moment.",
+      "This is a work in progress.",
       "If you have provided output from dkstat and it still does not work,",
       "please submit an issue on {.url {'https://github.com/rOpenGov/geodk/issues'}}"
     )

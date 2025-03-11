@@ -1,5 +1,6 @@
 # geodk 0.0.0.9001
 
+* **This is a breaking change.**
 * Cached datasets have been removed.
   * The function `prefill_chache()` have been added.
 * Added data retrieval functions.
