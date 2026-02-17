@@ -1,9 +1,9 @@
 pandoc: 3.1.11
-pkgdown: 2.1.1
+pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   tech-specs-for-dkstat: tech-specs-for-dkstat.html
-last_built: 2025-03-11T15:08Z
+last_built: 2026-02-17T20:31Z
 urls:
   reference: https://ropengov.github.io/geodk/reference
   article: https://ropengov.github.io/geodk/articles

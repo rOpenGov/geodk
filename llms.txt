@@ -1,0 +1,166 @@
+# geodk
+
+[geodk](https://ropengov.github.io/geodk/) provides access to Danish
+geospatial data.
+
+## Installation
+
+You can install [geodk](https://ropengov.github.io/geodk/) from
+r-universe with:
+
+``` r
+install.packages(
+  "geodk",
+  repos = c(
+    ropengov = "https://ropengov.r-universe.dev",
+    getOption("repos")
+  )
+)
+```
+
+You can install the latest development version of
+[geodk](https://ropengov.github.io/geodk/) from
+[GitHub](https://github.com/rOpenGov/geodk) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("rOpenGov/geodk")
+```
+
+## Functions
+
+[geodk](https://ropengov.github.io/geodk/) provides three main sets of
+functions:
+
+- Data retrieval
+- Plotting
+- Enrichment of statistical data from
+  [dkstat](https://ropengov.github.io/dkstat/)
+
+### Data retrieval
+
+The package contains a few functions for retrieving data.
+
+``` r
+regions()
+municipalities()
+parishes()
+constituencies()
+```
+
+The geographic levels not included in their own functions can be
+accessed through
+[`get_geo()`](https://ropengov.github.io/geodk/reference/get_geo.md).
+
+``` r
+get_geo()
+prefill_cache()
+```
+
+### Plotting
+
+The plotting functions include
+[`plot_denmark()`](https://ropengov.github.io/geodk/reference/plot_denmark.md)
+which easily plots a basic map of Denmark and returns it as a
+[ggplot2](https://ggplot2.tidyverse.org) object for you to edit. It also
+includes `plot_region()` and `plot_municipality()` which plots a subset
+of Denmark with focus on provided regions or municipalities.
+
+``` r
+library(geodk)
+plot_denmark()
+#> → Getting data on `regioner`. This usually takes 10.24s.
+#> Fetching data from the API. This will take some time.
+#> Reading data to `st`.
+#> Converting map data to `sf` object
+```
+
+![](reference/figures/README-example-1.png)
+
+``` r
+region <- plot_regions(region = c("Region Nordjylland", "Region Midtjylland"))
+#> → Using cached response.
+#> Change this behaviour by setting cache = FALSE
+```
+
+``` r
+municipality <- plot_municipalities(municipality = c("Aarhus", "Favrskov", "Vejle"))
+#> → Getting data on `kommuner`. This usually takes 13.13s.
+#> Fetching data from the API. This will take some time.
+#> Reading data to `st`.
+#> Converting map data to `sf` object
+```
+
+``` r
+library(patchwork)
+region + municipality
+```
+
+![](reference/figures/README-unnamed-chunk-6-1.png)
+
+### Enrichment of statistical data from `{dkstat}`
+
+The function
+[`geodk_enrich()`](https://ropengov.github.io/geodk/reference/geodk_enrich.md)
+enables you to add appropriate geographic information to statistical
+descriptions from the [dkstat](https://ropengov.github.io/dkstat/)
+package.
+
+``` r
+dkstat::dst_get_all_data("laby01") |> 
+  geodk::geodk_enrich()
+```
+
+# Package index
+
+## Data retrieval
+
+Functions for retrieving geographic data.
+
+- [`regions()`](https://ropengov.github.io/geodk/reference/regions.md) :
+  Get regions
+- [`municipalities()`](https://ropengov.github.io/geodk/reference/municipalities.md)
+  : Get municipalities
+- [`parishes()`](https://ropengov.github.io/geodk/reference/parishes.md)
+  : Get parishes
+- [`constituencies()`](https://ropengov.github.io/geodk/reference/constituencies.md)
+  : Get constituencies
+- [`get_geo()`](https://ropengov.github.io/geodk/reference/get_geo.md) :
+  Get geogrpahies
+- [`prefill_cache()`](https://ropengov.github.io/geodk/reference/prefill_cache.md)
+  : Prefill data retrieval cache
+
+## Plotting
+
+Convenient functions for plotting one or more dansih geographic parts.
+All of these function in the same way and allow you to provide a single
+name or a vector of names of the areas you would like to plot as well as
+fill and color options.
+
+- [`plot_denmark()`](https://ropengov.github.io/geodk/reference/plot_denmark.md)
+  : Plot a map of Denmark with given borders
+- [`plot_municipalities()`](https://ropengov.github.io/geodk/reference/plot_municipalities.md)
+  : Plot selected (or all) municipalities
+- [`plot_regions()`](https://ropengov.github.io/geodk/reference/plot_regions.md)
+  : Plot selected (or all) regions
+
+## Integration with other pacakges
+
+Functions to enhance data from other packages
+
+- [`geodk_enrich()`](https://ropengov.github.io/geodk/reference/geodk_enrich.md)
+  : Enrich a dataframe with geographic data
+
+## Misc
+
+Miscellanious functions
+
+- [`get_levels()`](https://ropengov.github.io/geodk/reference/get_levels.md)
+  : Get all available levels
+
+# Articles
+
+### All vignettes
+
+- [Technical specification for intergration with
+  {dkstat}](https://ropengov.github.io/geodk/articles/tech-specs-for-dkstat.md):
