@@ -9,6 +9,7 @@ You can install [geodk](https://ropengov.github.io/geodk/) from
 r-universe with:
 
 ``` r
+
 install.packages(
   "geodk",
   repos = c(
@@ -23,6 +24,7 @@ You can install the latest development version of
 [GitHub](https://github.com/rOpenGov/geodk) with:
 
 ``` r
+
 # install.packages("devtools")
 devtools::install_github("rOpenGov/geodk")
 ```
@@ -42,6 +44,7 @@ functions:
 The package contains a few functions for retrieving data.
 
 ``` r
+
 regions()
 municipalities()
 parishes()
@@ -53,6 +56,7 @@ accessed through
 [`get_geo()`](https://ropengov.github.io/geodk/reference/get_geo.md).
 
 ``` r
+
 get_geo()
 prefill_cache()
 ```
@@ -67,6 +71,7 @@ includes `plot_region()` and `plot_municipality()` which plots a subset
 of Denmark with focus on provided regions or municipalities.
 
 ``` r
+
 library(geodk)
 plot_denmark()
 #> → Getting data on `regioner`. This usually takes 10.24s.
@@ -78,12 +83,14 @@ plot_denmark()
 ![](reference/figures/README-example-1.png)
 
 ``` r
+
 region <- plot_regions(region = c("Region Nordjylland", "Region Midtjylland"))
 #> → Using cached response.
 #> Change this behaviour by setting cache = FALSE
 ```
 
 ``` r
+
 municipality <- plot_municipalities(municipality = c("Aarhus", "Favrskov", "Vejle"))
 #> → Getting data on `kommuner`. This usually takes 13.13s.
 #> Fetching data from the API. This will take some time.
@@ -92,6 +99,7 @@ municipality <- plot_municipalities(municipality = c("Aarhus", "Favrskov", "Vejl
 ```
 
 ``` r
+
 library(patchwork)
 region + municipality
 ```
@@ -107,6 +115,7 @@ descriptions from the [dkstat](https://ropengov.github.io/dkstat/)
 package.
 
 ``` r
+
 dkstat::dst_get_all_data("laby01") |> 
   geodk::geodk_enrich()
 ```
